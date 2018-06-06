@@ -1,0 +1,25 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb hide">
+    <li>
+        <a ui-sref="dashboard">Home</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li class="active"> Dashboard </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+<!-- BEGIN MAIN CONTENT -->
+<div class="page-content-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-6" ng-repeat="sloat in $ctrl.timeSlots">
+                    <div class="color-demo tooltips" data-toggle="modal" ng-click="$ctrl.openSloats(sloat)">
+                        <div ng-class="(sloat.isBook === true) ? 'bg-red bg-font-red' : 'bg-whit bg-font-white'" class="color-view bg-white bg-font-white bold uppercase">
+                            {{sloat.sloat_time}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
