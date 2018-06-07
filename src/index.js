@@ -53,7 +53,7 @@ app.factory('settings', ['$rootScope', function ($rootScope) {
 }]);
 //http://localhost:3000/
 //107.152.32.144:3000/
-app.constant('API_URL', 'http://localhost:3000/');
+app.constant('API_URL', 'http://107.152.32.144:3000/');
 app.constant('swal', swal);
 
 /* Setup App Main Controller */
