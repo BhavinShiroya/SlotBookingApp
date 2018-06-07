@@ -1,0 +1,49 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="$close()" aria-hidden="true"></button>
+    <h4 class="modal-title">{{$ctrl.title}}</h4>
+</div>
+<form class="" name="slotForm" ng-submit="slotForm.$valid && $ctrl.submit()" novalidate>
+    <div class="modal-body">
+        <div class="form-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="required-label">First Name
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <input required type="text" name="first_name" ng-model="$ctrl.slot.first_name" class="form-control" placeholder="Enter First Name">
+                        <div ng-show="slotForm.$submitted">
+                            <span ng-if="slotForm.first_name.$error.required" class="required"> Please enter first name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="required-label">Last Name
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <input required type="text" name="last_name" ng-model="$ctrl.slot.last_name" class="form-control" placeholder="Enter Last Name">
+                        <div ng-show="slotForm.$submitted">
+                            <span ng-if="slotForm.last_name.$error.required" class="required"> Please enter the last name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="required-label">Mobile
+                            <span class="required" aria-required="true"> * </span>
+                        </label>
+                        <input required type="text" name="mobile" ng-model="$ctrl.slot.mobile" class="form-control" placeholder="Enter Mobile Number">
+                        <div ng-show="slotForm.$submitted">
+                            <span ng-if="slotForm.mobile.$error.required" class="required"> Please enter the mobile number</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn default" ng-click="$close()">Close</button>
+        <button type="submit" class="btn green">Save</button>
+    </div>
+</form>

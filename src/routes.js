@@ -14,4 +14,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: "DashboardController",
       controllerAs: '$ctrl',
     })
+    .state('localstorage', {
+      url: "/localstorage",
+      templateUrl: "app/core/localstorage/localstorage.html",
+      controller: "LocalstorageCtrl",
+      controllerAs: '$ctrl',
+    })
 }

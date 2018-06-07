@@ -6,10 +6,9 @@
         vm.title = 'Add Slot';
         vm.slot = {};
         if (slotData._id) {
-            vm.title = 'Edit Slot';
-            vm.slot = angular.copy(slotData);
+            vm.title = 'Edit Slot';            
         }
-        console.log(slotData);
+        vm.slot = angular.copy(slotData);       
 
         function submit() {
             vm.slot.isBook = true;
